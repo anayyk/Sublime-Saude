@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Estudo Acessível</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    header {
+      background: #005fcc;
+      padding: 25px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    button,
+    input {
+      font-size: 20px;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: 3px solid #fff;
+      padding: 15px 25px;
+      margin: 10px 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:focus,
+    input:focus {
+      outline: 5px solid #00ffff;
+    }
+
+    .questao {
+      background: #222;
+      border: 2px solid #fff;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      padding: 12px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    #resultado {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .acessibilidade {
+      background: #333;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Estudo Acessível</h1>
+  <p>Plataforma de estudos para todos</p>
+</header>
+
+<main>
+
+  <section class="acessibilidade" aria-labelledby="acessibilidade-titulo">
+
+    <h2 id="acessibilidade-titulo">Controles de acessibilidade</h2>
+
+    <button
+      type="button"
+      onclick="lerPagina()"
+      aria-label="Ler o conteúdo da página em voz alta">
+      🔊 Ler página
+    </button>
+
+    <button
+      type="button"
+      onclick="pararLeitura()"
+      aria-label="Parar a leitura">
+      ⏹ Parar leitura
+    </button>
+
+  </section>
+
+
+  <section aria-labelledby="aula-titulo">
+
+    <h2 id="aula-titulo">Aula 1 — Matemática</h2>
+
+    <p>
+      Nesta aula vamos aprender uma operação matemática básica:
+      a adição.
+    </p>
+
+    <p>
+      A adição é usada para juntar duas ou mais quantidades.
+      Por exemplo: dois mais dois é igual a quatro.
+    </p>
+
+    <button
+      type="button"
+      onclick="lerAula()"
+      aria-label="Ouvir o conteúdo da aula">
+      🎧 Ouvir aula
+    </button>
+
+  </section>
+
+
+  <section class="questao" aria-labelledby="questao-titulo">
+
+    <h2 id="questao-titulo">Questão 1</h2>
+
+    <p>
+      Quanto é dois mais dois?
+    </p>
+
+    <form id="formulario">
+
+      <label>
+        <input
+          type="radio"
+          name="resposta"
+          value="3">
+        Alternativa A: três
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="resposta"
+          value="4">
+        Alternativa B: quatro
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="resposta"
+          value="5">
+        Alternativa C: cinco
+      </label>
+
+      <button
+        type="button"
+        onclick="verificarResposta()">
+        Responder
+      </button>
+
+    </form>
+
+    <div
+      id="resultado"
+      role="status"
+      aria-live="polite">
+    </div>
+
+  </section>
+
+
+  <section aria-labelledby="progresso-titulo">
+
+    <h2 id="progresso-titulo">Progresso</h2>
+
+    <p id="pontuacao">
+      Pontuação: 0
+    </p>
+
+  </section>
+
+</main>
+
+
+<script>
+
+  let pontos = 0;
+  let leituraAtual = null;
+
+
+  // Faz o navegador ler um texto
+  function falar(texto) {
+
+    // Para qualquer leitura anterior
+    window.speechSynthesis.cancel();
+
+    leituraAtual = new SpeechSynthesisUtterance(texto);
+
+    leituraAtual.lang = "pt-BR";
+    leituraAtual.rate = 0.9;
+    leituraAtual.pitch = 1;
+
+    window.speechSynthesis.speak(leituraAtual);
+  }
+
+
+  // Lê a página
+  function lerPagina() {
+
+    const texto = `
+      Estudo Acessível.
+
+      Controles de acessibilidade.
+
+      Aula 1, Matemática.
+
+      Nesta aula vamos aprender uma operação matemática básica:
+      a adição.
+
+      A adição é usada para juntar duas ou mais quantidades.
+
+      Por exemplo:
+      dois mais dois é igual a quatro.
+
+      Questão 1.
+
+      Quanto é dois mais dois?
+
+      Alternativa A: três.
+
+      Alternativa B: quatro.
+
+      Alternativa C: cinco.
+
+      Escolha uma alternativa e pressione o botão responder.
+    `;
+
+    falar(texto);
+  }
+
+
+  // Lê somente a aula
+  function lerAula() {
+
+    const texto = `
+      Aula 1, Matemática.
+
+      Nesta aula vamos aprender uma operação matemática básica:
+      a adição.
+
+      A adição é usada para juntar duas ou mais quantidades.
+
+      Por exemplo:
+      dois mais dois é igual a quatro.
+    `;
+
+    falar(texto);
+  }
+
+
+  // Para a leitura
+  function pararLeitura() {
+
+    window.speechSynthesis.cancel();
+
+  }
+
+
+  // Verifica a resposta
+  function verificarResposta() {
+
+    const resposta =
+      document.querySelector(
+        'input[name="resposta"]:checked'
+      );
+
+    const resultado =
+      document.getElementById("resultado");
+
+    if (!resposta) {
+
+      resultado.textContent =
+        "Você precisa escolher uma alternativa.";
+
+      falar(
+        "Você precisa escolher uma alternativa."
+      );
+
+      return;
+    }
+
+
+    if (resposta.value === "4") {
+
+      pontos++;
+
+      resultado.textContent =
+        "Resposta correta! Parabéns! Você ganhou um ponto.";
+
+      falar(
+        "Resposta correta! Parabéns! Você ganhou um ponto."
+      );
+
+    } else {
+
+      resultado.textContent =
+        "Resposta incorreta. A resposta correta é quatro.";
+
+      falar(
+        "Resposta incorreta. A resposta correta é quatro."
+      );
+
+    }
+
+
+    document.getElementById("pontuacao").textContent =
+      "Pontuação: " + pontos;
+
+  }
+
+
+  // Atalhos de teclado
+  document.addEventListener("keydown", function(event) {
+
+    // Alt + L = ler página
+    if (event.altKey && event.key.toLowerCase() === "l") {
+
+      event.preventDefault();
+
+      lerPagina();
+
+    }
+
+
+    // Alt + P = parar leitura
+    if (event.altKey && event.key.toLowerCase() === "p") {
+
+      event.preventDefault();
+
+      pararLeitura();
+
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
