@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Clinical Clarity - Saúde de Qualidade para Todos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#256b3a",
+                    "inverse-surface": "#2c322b",
+                    "primary-fixed-dim": "#6edd88",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#2c7140",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#006d31",
+                    "tertiary-fixed-dim": "#a3c9ff",
+                    "on-primary-fixed-variant": "#005323",
+                    "outline": "#6e7a6d",
+                    "on-secondary-fixed-variant": "#015224",
+                    "primary-container": "#00873e",
+                    "on-tertiary-container": "#fdfcff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#171d17",
+                    "tertiary": "#275e99",
+                    "surface-container-low": "#eff5eb",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#8afaa2",
+                    "tertiary-container": "#4477b3",
+                    "inverse-primary": "#6edd88",
+                    "surface": "#f5fbf1",
+                    "on-primary-fixed": "#00210a",
+                    "surface-dim": "#d6dcd2",
+                    "surface-container-high": "#e4eae0",
+                    "primary": "#006b30",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#8fd79b",
+                    "surface-variant": "#dee4da",
+                    "tertiary-fixed": "#d3e4ff",
+                    "background": "#f5fbf1",
+                    "surface-container-highest": "#dee4da",
+                    "on-background": "#171d17",
+                    "secondary-fixed": "#aaf4b5",
+                    "on-surface-variant": "#3e4a3e",
+                    "inverse-on-surface": "#ecf3e9",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f5fbf1",
+                    "outline-variant": "#bdcabb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#e9f0e6",
+                    "on-secondary-fixed": "#00210b",
+                    "on-tertiary-fixed": "#001c38",
+                    "on-tertiary-fixed-variant": "#004882",
+                    "on-primary-container": "#f7fff3",
+                    "secondary-container": "#aaf4b5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "margin-mobile": "16px",
+                    "lg": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Manrope"
+                    ],
+                    "headline-lg": [
+                            "Manrope"
+                    ],
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "label-sm": [
+                            "Manrope"
+                    ],
+                    "label-md": [
+                            "Manrope"
+                    ],
+                    "headline-lg-mobile": [
+                            "Manrope"
+                    ],
+                    "headline-md": [
+                            "Manrope"
+                    ],
+                    "headline-xl": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20 border-b border-outline-variant dark:border-outline">
+<div class="text-headline-md font-headline-md font-extrabold text-primary dark:text-primary-fixed-dim">Sublime Saúde</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Início</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Especialidades</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Como Funciona</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Sobre Nós</a>
+</nav>
+<button class="hidden md:block bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface-tint transition-colors">
+                Agendar Consulta
+            </button>
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface-container-low py-xl px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="z-10 space-y-lg">
+<div class="space-y-sm">
+<span class="inline-block bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-sm text-label-sm mb-4">Saúde Pública</span>
+<h1 class="text-headline-xl font-headline-xl text-on-surface">
+                            Saúde de Qualidade para Todos
+                        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl">
+                            Atendimento humano, versátil e acessível. Escolha entre consulta presencial ou telemedicina, com a eficiência que você merece.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-6 py-4 rounded-lg font-label-md text-label-md shadow-sm hover:bg-surface-tint transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="local_hospital">local_hospital</span>
+                            Pegar Ficha (Presencial)
+                        </button>
+<button class="border-2 border-primary text-primary px-6 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="video_camera_front">video_camera_front</span>
+                            Agendar Online
+                        </button>
+</div>
+</div>
+<div class="relative h-[400px] lg:h-[600px] rounded-xl overflow-hidden shadow-lg border border-outline-variant">
+<img class="object-cover w-full h-full absolute inset-0" data-alt="A modern, bright, and welcoming medical clinic reception area in Brazil. Sunlight streams through large windows, illuminating a clean, minimalist space with comfortable seating and subtle green branding accents. A friendly healthcare professional in neat scrubs is assisting a patient at the front desk. The mood is calm, professional, and accessible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBukMcLE6VfJzc4oI6MTZXLB0_tnzIb5M-JwFRMR45GUy6yt1tM5N0RY3aXe_bKlYSTRb_GhUXxrAXyLuj1zg0yxnZCaq9qxjMhCMFMzWfLsjiEWiBJGPNCJjSeK9oF-gpHyJ__wiRrh2ib43xTSo8XJqXG9QUASEbpIUV5gqvFlUj1tKWvVjoQv1dZq3v2yThXuBWwWHSFZE_z8T_2bJ4uMM6pxYM0YtgtGEkl3evp8fR4bOp5OZGcoA">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant">
+<div class="w-full py-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface mb-2">Sublime Saúde</span>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant text-center md:text-left">© 2026 Sublime Saúde. Em conformidade com a LGPD e normas de saúde.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-4">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Suporte</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Privacidade</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Termos de Uso</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Compliance</a>
+</nav>
+</div>
+</footer>
+
+
+
+
+
+
+</body></html>

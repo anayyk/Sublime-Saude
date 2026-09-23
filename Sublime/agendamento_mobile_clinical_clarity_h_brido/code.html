@@ -1,0 +1,236 @@
+<!DOCTYPE html><html class="light" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Agendar Consulta - Clinical Clarity</title>
+<!-- Tailwind & Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#256b3a",
+                        "inverse-surface": "#2c322b",
+                        "primary-fixed-dim": "#6edd88",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#2c7140",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#006d31",
+                        "tertiary-fixed-dim": "#a3c9ff",
+                        "on-primary-fixed-variant": "#005323",
+                        "outline": "#6e7a6d",
+                        "on-secondary-fixed-variant": "#015224",
+                        "primary-container": "#00873e",
+                        "on-tertiary-container": "#fdfcff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#171d17",
+                        "tertiary": "#275e99",
+                        "surface-container-low": "#eff5eb",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#8afaa2",
+                        "tertiary-container": "#4477b3",
+                        "inverse-primary": "#6edd88",
+                        "surface": "#f5fbf1",
+                        "on-primary-fixed": "#00210a",
+                        "surface-dim": "#d6dcd2",
+                        "surface-container-high": "#e4eae0",
+                        "primary": "#006b30",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#8fd79b",
+                        "surface-variant": "#dee4da",
+                        "tertiary-fixed": "#d3e4ff",
+                        "background": "#f5fbf1",
+                        "surface-container-highest": "#dee4da",
+                        "on-background": "#171d17",
+                        "secondary-fixed": "#aaf4b5",
+                        "on-surface-variant": "#3e4a3e",
+                        "inverse-on-surface": "#ecf3e9",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f5fbf1",
+                        "outline-variant": "#bdcabb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#e9f0e6",
+                        "on-secondary-fixed": "#00210b",
+                        "on-tertiary-fixed": "#001c38",
+                        "on-tertiary-fixed-variant": "#004882",
+                        "on-primary-container": "#f7fff3",
+                        "secondary-container": "#aaf4b5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-xl": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<div class="text-headline-md font-headline-md font-extrabold text-primary dark:text-primary-fixed-dim">
+                Clinical Clarity
+            </div>
+<!-- Desktop Nav (Hidden on Mobile) -->
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Início</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Especialidades</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Como Funciona</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md opacity-80 transition-opacity" href="#">Consultas</a>
+</nav>
+<button class="hidden md:flex bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors">
+                Agendar Consulta
+            </button>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content - Appointments Step-by-Step Flow -->
+<main class="flex-grow flex flex-col w-full max-w-lg mx-auto px-margin-mobile py-md relative z-10">
+<!-- Progress Stepper -->
+<div class="w-full flex items-center justify-between mb-lg relative">
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-variant -z-10 -translate-y-1/2 rounded-full"></div>
+<div class="absolute top-1/2 left-0 w-1/3 h-1 bg-tertiary -z-10 -translate-y-1/2 rounded-full"></div>
+<!-- Step 1 (Active) -->
+<div class="flex flex-col items-center gap-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-label-md text-label-md font-bold">1</div>
+<span class="font-label-sm text-label-sm text-on-surface">Modalidade</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-xs">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-bold">2</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Especialista</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-xs">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-bold">3</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Confirmação</span>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-sm text-center">Como você prefere ser atendido?</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg text-center">Selecione o tipo de consulta para continuar.</p>
+<!-- Bento Grid Options -->
+<div class="grid grid-cols-1 gap-md">
+<!-- Option: Telemedicina -->
+<label class="relative block cursor-pointer group">
+<input class="peer sr-only" name="appointment_type" type="radio" value="online">
+<div class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-start gap-md transition-all duration-200 hover:bg-surface peer-checked:border-primary peer-checked:bg-surface-container-low peer-checked:ring-1 peer-checked:ring-primary shadow-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">videocam</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Telemedicina</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Consulta online por vídeo, do conforto da sua casa. Ideal para orientações e retornos.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-colors mt-2">
+<span class="material-symbols-outlined text-white text-sm opacity-0 peer-checked:opacity-100" style="font-size: 16px;">check</span>
+</div>
+</div>
+</label>
+<!-- Option: Presencial -->
+<label class="relative block cursor-pointer group">
+<input class="peer sr-only" name="appointment_type" type="radio" value="presencial">
+<div class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-start gap-md transition-all duration-200 hover:bg-surface peer-checked:border-primary peer-checked:bg-surface-container-low peer-checked:ring-1 peer-checked:ring-primary shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Presencial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Atendimento presencial em nossas clínicas. Recomendado para exames físicos e primeiras consultas.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-colors mt-2">
+<span class="material-symbols-outlined text-white text-sm opacity-0 peer-checked:opacity-100" style="font-size: 16px;">check</span>
+</div>
+</div>
+</label>
+</div>
+<div class="mt-xl flex flex-col gap-sm">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg flex items-center justify-center gap-xs hover:bg-surface-tint transition-colors">
+                Próximo Passo
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full bg-transparent text-primary font-label-md text-label-md py-4 rounded-lg flex items-center justify-center hover:bg-surface-container-low transition-colors">
+                Cancelar
+            </button>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant mt-auto">
+<div class="w-full py-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface">
+                Clinical Clarity
+            </div>
+<div class="flex flex-wrap justify-center gap-md font-label-sm text-label-sm">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Suporte</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Privacidade</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Termos de Uso</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Compliance</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">© 2026 Clinical Clarity. Em conformidade com a LGPD e normas de sa''de.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for radio buttons to update the visual checkmark manually if needed, 
+        // though peer-checked handles most of it via CSS.
+        document.querySelectorAll('input[name="appointment_type"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                // Remove checkmark visibility from all
+                document.querySelectorAll('.peer-checked\\:opacity-100').forEach(icon => {
+                     // The CSS handles this smoothly, but we can hook in here for analytics or further state updates
+                });
+            });
+        });
+    </script>
+
+
+</body></html>

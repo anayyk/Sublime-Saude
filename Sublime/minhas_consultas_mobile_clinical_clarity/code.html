@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Minhas Consultas - Clinical Clarity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#2c7140",
+                      "inverse-primary": "#6edd88",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#00210b",
+                      "inverse-on-surface": "#ecf3e9",
+                      "surface": "#f5fbf1",
+                      "tertiary-container": "#4477b3",
+                      "surface-container": "#e9f0e6",
+                      "background": "#f5fbf1",
+                      "surface-variant": "#dee4da",
+                      "tertiary-fixed-dim": "#a3c9ff",
+                      "surface-container-high": "#e4eae0",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#015224",
+                      "secondary": "#256b3a",
+                      "surface-tint": "#006d31",
+                      "on-tertiary-container": "#fdfcff",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#aaf4b5",
+                      "tertiary": "#275e99",
+                      "on-surface-variant": "#3e4a3e",
+                      "primary-fixed": "#8afaa2",
+                      "primary-container": "#00873e",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed": "#001c38",
+                      "on-background": "#171d17",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#aaf4b5",
+                      "primary": "#006b30",
+                      "on-surface": "#171d17",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#005323",
+                      "outline": "#6e7a6d",
+                      "on-primary-fixed": "#00210a",
+                      "inverse-surface": "#2c322b",
+                      "surface-bright": "#f5fbf1",
+                      "outline-variant": "#bdcabb",
+                      "primary-fixed-dim": "#6edd88",
+                      "on-tertiary-fixed-variant": "#004882",
+                      "surface-dim": "#d6dcd2",
+                      "secondary-fixed-dim": "#8fd79b",
+                      "tertiary-fixed": "#d3e4ff",
+                      "surface-container-low": "#eff5eb",
+                      "surface-container-highest": "#dee4da",
+                      "on-primary-container": "#f7fff3",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "lg": "48px",
+                      "margin-desktop": "40px",
+                      "xs": "4px",
+                      "gutter": "24px",
+                      "xl": "80px",
+                      "base": "8px",
+                      "margin-mobile": "16px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "label-md": [
+                              "Manrope"
+                      ],
+                      "label-sm": [
+                              "Manrope"
+                      ],
+                      "headline-xl": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Manrope"
+                      ],
+                      "headline-lg-mobile": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Hidden on Mobile as per typical app logic, assuming BottomNav might exist or a simplified header) -->
+<!-- Creating a simplified mobile header based on the JSON identity -->
+<header class="bg-surface border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16">
+<h1 class="font-headline-md text-headline-md font-extrabold text-primary">
+                Clinical Clarity
+            </h1>
+<button class="p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col w-full px-margin-mobile py-md pb-32">
+<!-- Page Title -->
+<div class="mb-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Minhas Consultas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Gerencie seus agendamentos e histórico.</p>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-outline-variant mb-md w-full">
+<button class="flex-1 pb-sm font-label-md text-label-md text-primary border-b-2 border-primary text-center">
+                Próximas
+            </button>
+<button class="flex-1 pb-sm font-label-md text-label-md text-on-surface-variant text-center hover:text-primary transition-colors">
+                Histórico
+            </button>
+</div>
+<!-- Consultations List (Vertical Cards) -->
+<div class="flex flex-col gap-sm">
+<!-- Card 1: Telemedicina (Hoje) -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/30 p-sm shadow-sm flex flex-col gap-sm hover:bg-surface-container-lowest/90 transition-colors">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-xs bg-tertiary-container/10 text-tertiary-container px-2 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[16px]" data-icon="videocam">videocam</span>
+<span class="font-label-sm text-label-sm">Telemedicina</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span> Hoje, 14:30
+                    </span>
+</div>
+<div class="flex gap-sm items-center mt-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female doctor wearing a white coat, looking warmly at the camera. Professional studio lighting with a light background. High-quality corporate photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2U8vIKnrvkfQMNeJ9m0WAVKeKe58f5mNwgoE8r2Do3eSx3tRI02nVocqIHwdvwOecZrru-Z5JMOBCdGc4_5Ci1N9RQuwvrQeBjVkOV_vmlHkwrBdfssuBDJwZZbxf5CmqdpbryFutWcrMLXdlfCM95HaQzjuvATLuixd6ULhgT0NhQ7NCIDbY7_dInhl8HdQhBVZV4hB-Q8N9L_ZHDvMzkL3eZoOBxgCmO-Gn_L-Tw0120rvq6G3WWQ">
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-md text-label-md text-on-surface">Dra. Ana Silva</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Cardiologista</p>
+</div>
+</div>
+<div class="mt-xs pt-xs border-t border-outline-variant/20 flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary font-label-md text-label-md py-2 rounded-lg flex justify-center items-center gap-xs hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]" data-icon="call">call</span>
+                        Entrar na Chamada
+                    </button>
+</div>
+</div>
+<!-- Card 2: Presencial (Amanhã) -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/30 p-sm shadow-sm flex flex-col gap-sm hover:bg-surface-container-lowest/90 transition-colors">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[16px]" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-label-sm text-label-sm">Presencial</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                        Amanhã, 09:00
+                    </span>
+</div>
+<div class="flex gap-sm items-center mt-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden shrink-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-md text-label-md text-on-surface">Dr. Carlos Mendes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Ortopedista</p>
+</div>
+</div>
+<div class="flex items-start gap-xs text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5" data-icon="location_on">location_on</span>
+<p class="font-body-md text-body-md text-sm">Clínica Central - Sala 204<br>Av. Paulista, 1000</p>
+</div>
+<div class="mt-xs pt-xs border-t border-outline-variant/20 flex gap-sm">
+<button class="flex-1 border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg flex justify-center items-center gap-xs hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="map">map</span>
+                        Ver Mapa
+                    </button>
+<button class="w-12 h-10 border-2 border-outline-variant/50 text-on-surface-variant rounded-lg flex justify-center items-center hover:bg-surface-variant/20 transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_month">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Simulating a Mobile Bottom Nav based on typical patterns for a mobile destination -->
+<nav class="fixed bottom-0 w-full bg-surface-container-lowest border-t border-outline-variant/30 flex justify-around items-center h-16 pb-2 px-4 shadow-[0_-4px_20px_rgba(0,28,56,0.05)] z-50">
+<button class="flex flex-col items-center justify-center w-16 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-1 text-[10px]">Início</span>
+</button>
+<button class="flex flex-col items-center justify-center w-16 text-primary">
+<div class="bg-primary/10 px-4 py-0.5 rounded-full mb-1">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] font-bold">Consultas</span>
+</button>
+<button class="flex flex-col items-center justify-center w-16 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm mt-1 text-[10px]">Especialidades</span>
+</button>
+</nav>
+</body></html>
