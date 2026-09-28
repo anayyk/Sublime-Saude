@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha seu Atendimento - Sublime Saúde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Sublime Saúde</div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Especialidades</a>
+      <a href="#">Como Funciona</a>
+      <a href="#" class="ativo">Consultas</a>
+    </nav>
+
+    <button class="botao" onclick="agendarConsulta()">
+      Agendar Consulta
+    </button>
+
+    <button class="menu">☰</button>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h1>Escolha seu Atendimento</h1>
+
+      <p>
+        Selecione a modalidade de consulta que melhor atende às suas
+        necessidades hoje. Sistemas integrados para garantir acesso
+        rápido e eficiente à saúde.
+      </p>
+    </section>
+
+    <section class="cards">
+
+      <!-- CARD PRESENCIAL -->
+      <div class="card">
+
+        <div class="imagem presencial">
+          <span>📍 Unidades Locais</span>
+        </div>
+
+        <div class="conteudo">
+
+          <div class="titulo">
+            <div class="icone verde">🏥</div>
+            <h2>Atendimento Presencial</h2>
+          </div>
+
+          <p>
+            Precisa de avaliação física ou pronto atendimento?
+            Retire sua ficha digital antecipadamente para unidades
+            próximas e evite filas.
+          </p>
+
+          <div class="seletor" onclick="escolherUnidade()">
+            <div>
+              <small>Unidade sugerida</small>
+              <strong>Centro de Saúde Central</strong>
+            </div>
+
+            <span>⌄</span>
+          </div>
+
+          <button class="botao-outline" onclick="retirarFicha()">
+            🎫 Retirar Ficha Digital
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- CARD ONLINE -->
+      <div class="card">
+
+        <div class="imagem online">
+
+          <div class="calendario">
+            <div class="calendario-topo">
+              <strong>Maio 2024</strong>
+              <span>● ●</span>
+            </div>
+
+            <hr>
+
+            <div class="dias">
+              <div></div>
+              <div></div>
+              <b>14</b>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="conteudo">
+
+          <div class="titulo">
+            <div class="icone azul">💻</div>
+            <h2>Consulta Online</h2>
+          </div>
+
+          <p>
+            Atendimento médico por videochamada. Ideal para retornos,
+            renovação de receitas e triagem inicial de sintomas leves,
+            sem sair de casa.
+          </p>
+
+          <div class="seletor" onclick="escolherEspecialidade()">
+            <div>
+              <small>Especialidade</small>
+              <strong>Escolher Especialidade</strong>
+            </div>
+
+            <span>⌄</span>
+          </div>
+
+          <button class="botao" onclick="agendarHorario()">
+            📅 Agendar Horário
+          </button>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="aviso">
+
+      <div class="icone-aviso">ⓘ</div>
+
+      <div>
+        <h3>Em caso de emergência grave</h3>
+
+        <p>
+          Dirija-se imediatamente à Unidade de Pronto Atendimento (UPA)
+          mais próxima ou ligue para o SAMU (192). Este sistema é
+          destinado a consultas eletivas e triagem.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="rodape-info">
+      <strong>Sublime Saúde</strong>
+
+      <p>
+        © 2026 Sublime Saúde. Em conformidade com a LGPD e normas de saúde.
+      </p>
+    </div>
+
+    <div class="links">
+      <a href="#">Suporte</a>
+      <a href="#">Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Compliance</a>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

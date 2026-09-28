@@ -1,0 +1,464 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5fbf1;
+  color: #171d17;
+}
+
+
+/* CABEÇALHO */
+
+header {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid #bdcabb;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 5%;
+  gap: 30px;
+}
+
+.logo {
+  color: #006b30;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #3e4a3e;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #006b30;
+}
+
+nav .ativo {
+  color: #006b30;
+  border-bottom: 2px solid #006b30;
+  padding-bottom: 5px;
+}
+
+
+/* BOTÕES */
+
+button {
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.botao {
+  background: #006b30;
+  color: white;
+
+  border: 2px solid #006b30;
+  border-radius: 6px;
+
+  padding: 11px 18px;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: #005323;
+}
+
+.botao-outline {
+  width: 100%;
+
+  background: white;
+  color: #006b30;
+
+  border: 2px solid #006b30;
+  border-radius: 6px;
+
+  padding: 11px 18px;
+  font-weight: bold;
+}
+
+.botao-outline:hover {
+  background: #e9f5e7;
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 25px;
+}
+
+
+/* CONTEÚDO */
+
+main {
+  width: 90%;
+  max-width: 1150px;
+
+  margin: 55px auto;
+}
+
+.intro {
+  max-width: 750px;
+  margin-bottom: 45px;
+}
+
+.intro h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  color: #3e4a3e;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #bdcabb;
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 5px 20px #00000012;
+}
+
+
+/* IMAGENS */
+
+.imagem {
+  height: 190px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 15px;
+}
+
+.presencial {
+  background:
+    linear-gradient(to bottom, #dbe8d8, #c9dcca);
+}
+
+.presencial span {
+  background: white;
+  padding: 8px 13px;
+  border-radius: 20px;
+
+  font-size: 13px;
+}
+
+
+/* ÁREA DO CALENDÁRIO */
+
+.online {
+  background: #eaf2fb;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.calendario {
+  width: 190px;
+  padding: 15px;
+
+  background: white;
+
+  border: 1px solid #bdcabb;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 15px #00000015;
+
+  transform: rotate(-2deg);
+}
+
+.calendario-topo {
+  display: flex;
+  justify-content: space-between;
+
+  color: #275e99;
+  font-size: 13px;
+}
+
+.calendario-topo span {
+  color: #ba1a1a;
+  font-size: 9px;
+}
+
+.calendario hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+
+  margin: 10px 0;
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.dias div,
+.dias b {
+  height: 28px;
+  border-radius: 4px;
+  background: #e9f0e6;
+}
+
+.dias b {
+  background: #4477b3;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* CONTEÚDO DO CARD */
+
+.conteudo {
+  padding: 25px;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 15px;
+}
+
+.titulo h2 {
+  font-size: 23px;
+}
+
+.icone {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verde {
+  background: #aaf4b5;
+}
+
+.azul {
+  background: #d3e4ff;
+}
+
+.conteudo > p {
+  color: #3e4a3e;
+
+  line-height: 1.6;
+
+  min-height: 105px;
+
+  margin-bottom: 20px;
+}
+
+
+/* SELETORES */
+
+.seletor {
+  background: #e9f0e6;
+
+  border: 1px solid #bdcabb;
+  border-radius: 6px;
+
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  margin-bottom: 18px;
+}
+
+.seletor:hover {
+  border-color: #006b30;
+}
+
+.seletor div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.seletor small {
+  color: #3e4a3e;
+}
+
+.seletor strong {
+  font-size: 15px;
+}
+
+.seletor > span {
+  font-size: 22px;
+}
+
+
+/* AVISO */
+
+.aviso {
+  margin-top: 30px;
+
+  padding: 20px;
+
+  background: #e9f2fa;
+
+  border: 1px solid #c7d9ea;
+  border-radius: 8px;
+
+  display: flex;
+  gap: 15px;
+}
+
+.icone-aviso {
+  color: #275e99;
+  font-size: 30px;
+}
+
+.aviso h3 {
+  margin-bottom: 5px;
+}
+
+.aviso p {
+  color: #3e4a3e;
+  line-height: 1.5;
+}
+
+
+/* RODAPÉ */
+
+footer {
+  background: #e9f0e6;
+
+  border-top: 1px solid #bdcabb;
+
+  padding: 35px 5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.rodape-info strong {
+  color: #171d17;
+  font-size: 20px;
+}
+
+.rodape-info p {
+  color: #3e4a3e;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: #3e4a3e;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.links a:hover {
+  color: #006b30;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+  header {
+    height: auto;
+
+    padding: 18px 5%;
+
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header > .botao {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  main {
+    margin: 35px auto;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .conteudo > p {
+    min-height: auto;
+  }
+
+  .aviso {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+}
